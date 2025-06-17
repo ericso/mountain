@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://wribmcg32og7"]
+
+[ext_resource type="Script" uid="uid://yqvtgbuh6svy" path="res://floor.gd" id="1_oj3tl"]
+[ext_resource type="Texture2D" uid="uid://bvdrtdueum2bm" path="res://simple64x_tiles6.png" id="2_cgngl"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wd3ws"]
+texture = ExtResource("2_cgngl")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_qn07e"]
+tile_size = Vector2i(64, 64)
+sources/0 = SubResource("TileSetAtlasSource_wd3ws")
+
+[node name="Floor" type="Node2D"]
+script = ExtResource("1_oj3tl")
+
+[node name="Rooms" type="TileMapLayer" parent="."]
+tile_set = SubResource("TileSet_qn07e")

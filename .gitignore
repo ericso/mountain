@@ -1,0 +1,38 @@
+# Godot-specific
+.import/
+.godot/
+export.cfg
+export_presets.cfg
+
+# Optional: Ignore crash logs, version files
+.crash.txt
+.version
+
+# OS junk
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE junk
+*.sublime-project
+*.sublime-workspace
+.vscode/
+.idea/
+
+# Backup files
+*~
+*.tmp
+*.bak
+
+# C# users (Mono)
+.mono/
+*.csproj
+*.sln
+*.user
+*.pidb
+*.dll
+*.exe
+*.pdb
+*.mdb
+*.cache
+*.vs/
