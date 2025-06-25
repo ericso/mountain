@@ -1,11 +1,27 @@
-[gd_scene load_steps=2 format=3 uid="uid://dq475hbs7gjv0"]
+[gd_scene load_steps=4 format=3 uid="uid://dq475hbs7gjv0"]
 
-[ext_resource type="Script" uid="uid://g3jegnutgb5w" path="res://building.gd" id="1_0xm2m"]
+[ext_resource type="Script" uid="uid://bnwnups8cyjgo" path="res://main.gd" id="1_h2yge"]
+[ext_resource type="Script" uid="uid://btoqic5v6si4i" path="res://world.gd" id="2_1bvp3"]
+[ext_resource type="Script" uid="uid://8xkkal7s2idn" path="res://label.gd" id="4_1bvp3"]
 
 [node name="Main" type="Node2D"]
+script = ExtResource("1_h2yge")
 
-[node name="Camera2D" type="Camera2D" parent="."]
-anchor_mode = 0
+[node name="World" type="Node2D" parent="."]
+script = ExtResource("2_1bvp3")
 
-[node name="Building" type="Node2D" parent="."]
-script = ExtResource("1_0xm2m")
+[node name="Camera2D" type="Camera2D" parent="World"]
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="PlaceFloorButton" type="Button" parent="UI"]
+offset_left = 265.0
+offset_top = 1075.0
+offset_right = 358.0
+offset_bottom = 1106.0
+text = "Place Floor"
+
+[node name="Label" type="Label" parent="UI"]
+offset_right = 40.0
+offset_bottom = 23.0
+script = ExtResource("4_1bvp3")
